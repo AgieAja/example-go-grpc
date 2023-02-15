@@ -1,4 +1,4 @@
-module example-go-grpc
+module github.com/AgieAja/example-go-grpc
 
 go 1.19
 
