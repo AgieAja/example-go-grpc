@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package product;
+
+option go_package = "productpb/proto";
+
+service ProductService {
+    rpc GetProduct(Empty) returns (GetProductsResponse) {}
+}
+
+message Empty {}
+
+message GetProductsResponse {
+    repeated GetProductResponse products = 1;
+}
+  
+message GetProductResponse {
+    int32 id = 1;
+    string name = 2;
+}
